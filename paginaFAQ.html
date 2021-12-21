@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORUM</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./progetto.css">
+    </head>
+    <body>
+        <div class="container-fluid" id="Background">
+            <div class="container-fluid" id="Pagina">
+                <div class="row"  id="BSPartSx">
+                    <div class="col" id="titolo">
+                        <img id="logo" src="https://pentagram-production.imgix.net/cc7fa9e7-bf44-4438-a132-6df2b9664660/EMO_LOL_02.jpg?rect=0%2C0%2C1440%2C1512">
+                        <text>FORUM</text>
+                    </div>
+                    <div class="col" id="BSPartDx1">
+                        <button class="btn btn-default" id="Registrazione" onclick="Registrazione()">REGISTRAZIONE</button>
+                        <button class="btn btn-default" id="Login" onclick="MLogin()">LOGIN</button>
+                    </div>
+                    <div class="col" id="BSPartDx2">
+                        <button class="btn btn-default" id="Login" onclick="Modifica()">MODIFICA</button>
+                        <button class="btn btn-default" id="Login" onclick="Elimina()">ELIMINA</button>
+                        <button class="btn btn-default" id="Login" onclick="LogOut()">LOGOUT</button>
+                        <img id="ImmagineProfilo" src="http://imperialsoftech.com/images/front/Default_profile_picture.jpg">   
+                    </div>
+                </div>
+                <div class="row" id="BarraSS">
+                    <div class="col">
+                        <button class="btn btn-primary" id="button" onclick="location.href='./homepage.html'">HOME</button>
+                    </div>
+                    <div class="col">
+                        <button id="button" onclick="location.href='paginaChamp.html'">CAMPIONI</button>
+                    </div>
+                    <div class="col">
+                        <select id="select">
+                            <option selected>COMMUNITY</option>
+                            <option>FACEBOOK</option>
+                            <option>INSTA</option>
+                            <option>TWITCH</option>       
+                        </select>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" id="button" onclick="location.href='https:/www.twitch.tv/directory/game/League%20of%20Legends?lang=it'">LIVE</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" id="button" onclick="location.href='./paginaFAQ.html'">FAQ</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt107f004fd12ef551/60ee0e5f8258b32d83974da8/Jinx_0.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt83a0dab3073b2a61/5f7f70b2c1be730f80a84a74/aurelionsol_skin01.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc6e788b11a9c8245/60ee0f71a86d0f5a0be449a3/MissFortune_0.jpg" alt="image not found">
+                        <img class="center" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Warwick_0.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8d1a3e286ee753cf/5f76a07faf58110efed2652d/Ahri_Skin01.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5003985a072cb830/60ee0de7fae20a5b4faf0ac1/Heimerdinger_0.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4bc5fffe8811bf6a/60ee0bfc84a5742702dbc06c/Braum_0.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9fd7de40b070c6d4/60ee12e97a84715a12c2a301/Thresh_0.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt386aa1a09687ad91/60ee138c43739d6620a57392/Vi_0.jpg" alt="image not found">
+                        <img class="center" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta9f1899e82bb1965/60ee0e4ac019ad2aaa39a4d2/Jayce_0.jpg" alt="image not found">
+                    </div>   
+                </div>
+                <br>
+                <br>
+                <div class="row" id="testo">
+                    <div class="col">
+                        <div class="BarraCommenti" id="BarraCommenti">
+                            <div class="BarraSuperioreC">
+                                <img id="ImmagineProfilo" align="left" src="http://imperialsoftech.com/images/front/Default_profile_picture.jpg" alt="image not found">
+                                <div class="NomeUtente">
+                                    <!--Nome Utente loggato--><input id="NomeUtente" value="" disabled></input>
+                                </div> 
+                            </div>
+                            <textarea id="AreaDiTesto" maxlength="1225"></textarea>
+                            <div class="BarraInferioreC">
+                                <text>Mi Piace:</text><text id="contatoreMP"> 0</text>
+                                <text id="NonMiPiace">Non Mi Piace:</text><text id="contatoreNMP"> 0</text>
+                                <button onclick="NuovoCommento()">PUBBLICA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <!--MODALE REGISTRAZIONE-->
+                <div class="modalRegistrazione" id="ModalRegistrazione">
+                    <h3 style="text-align: center;">Registrazione Nuovo Utente</h3>
+                    <input id="ImmagineProfilo" type="image" src="http://imperialsoftech.com/images/front/Default_profile_picture.jpg"><br><br>
+                    <input id="Username" name="Username"  type="text" placeholder="Username" maxlength="18" required><br><br>
+                    <input id="Email" name="Email" type="email" placeholder="Email" maxlength="18"  required><br><br>
+                    <input id="Password" name="Password" type="password" placeholder="Password" maxlength="18"  required><br><br>
+                    <div class="checkbox">
+                        <input id="PrivacyPolicy" type="checkbox"  placeholder="Privacy Policy" name="Privacy Policy" required>
+                        <label for="Privacy Policy">accetto la privacy</label><br>
+                    </div>
+    
+                    <div id="tastiForm">
+                        <button onclick="AnnullaRegistrazione()">ANNULLA</button>
+                        <button type="submit" onclick="FetchRegistrazione()">ISCRIVITI</button>
+                    </div>
+                </div>
+                 <!--MODALE LOGIN-->
+                 <div class="modalLogin" id="ModalLogin">
+                    <h3 style="text-align: center;">Login</h3>
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Username" name="Username" maxlength="27" required><br><br>
+                    <input type="email" placeholder="Email" name="Email" maxlength="27" required><br><br>
+                    <input type="password" placeholder="Password" name="Password" maxlength="27" required><br><br>
+                    <div class="tastiForm">
+                        <button onclick="AnnullaLogin()">ANNULLA</button>
+                        <button type="submit" onclick="FetchLogin()">LOGIN</button>
+                    </div>
+                </div>
+
+                <!--MODALE ELIMINA-->
+                <div class="modalDelete" id="modalDelete">
+                    <h3 style="text-align: center;">Elimina</h3>
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Username" name="Username" maxlength="27" required><br><br>
+                    <input type="email" placeholder="Email" name="Email" maxlength="27" required><br><br>
+                    <input type="password" placeholder="Password" name="Password" maxlength="27" required><br><br>
+                    <div class="tastiForm">
+                        <button onclick="AnnullaEliminazione()">ANNULLA</button>
+                        <button onclick="FetchElimina()">ELIMINA</button>
+                    </div>
+                </div>
+
+                <!--MODALE MODIFICA-->
+                <div class="modalUpdate" id="modalUpdate">
+                    <h3 style="text-align: center;">Modifica</h3>
+                    <br>
+                    <br>
+                    <input id="Username" type="text" placeholder="Username" name="Username" maxlength="27"><br><br>
+                    <input id="Email" type="email" placeholder="Email" name="Email" maxlength="27"><br><br>
+                    <input id="Password" type="password" placeholder="Password" name="Password" maxlength="27"><br><br>
+                    <div class="tastiForm">
+                        <button onclick="AnnullaModifica()">ANNULLA</button>
+                        <button onclick="FetchModifica()">MODIFICA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./FrontendJS.js"></script>            
+    </body>
+</html>
